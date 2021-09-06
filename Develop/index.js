@@ -29,7 +29,7 @@ const questions = [{
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     let filler = `Hello World`
-    fs.writeFile('README.md', filler, (err) =>
+    fs.writeFile(fileName, filler, (err) =>
     err ? console.error(err) : console.log('Success!'))
 }
 
@@ -37,7 +37,8 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then((data) => {
-        writeToFile(filename, data)
+        const fileName = "README.md"
+        writeToFile(fileName, data)
     })
 }
 
