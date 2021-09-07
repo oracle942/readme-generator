@@ -35,9 +35,9 @@ const questions = [{
     name: 'github',
     message: "What is your github username?"},
 
-    {type: 'input',
+    {type: 'list',
     name: 'license',
-    message: "What kind of license would ?",
+    message: "What license will be added?",
     choices: ["MIT", "BSD", "GPL"]},
 
 
@@ -48,7 +48,7 @@ function writeToFile(fileName, data) {
     let filler = `# ${data.license} License
 
     # TITLE
-    ${data.title}
+    ${data.name}
 
     # DESCRIPTION
     ${data.usage}
@@ -86,14 +86,15 @@ function writeToFile(fileName, data) {
 
 
     fs.writeFile(fileName, filler, (err) =>
-    err ? console.error(err) : console.log('Success!'))
+    err ? console.error(err) : console.log('Success!')
+    );
 }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
     .then((data) => {
-        const fileName = `${data.title}` + ".md"
+        let fileName = `${data.name}` + ".md";
         writeToFile(fileName, data)
     })
 }
