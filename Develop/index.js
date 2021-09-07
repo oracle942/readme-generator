@@ -81,8 +81,8 @@ ${data.test}
 ${data.issues}
 
 # QUESTIONS
-* ${data.email}
-* ${data.github}`
+* Inquiries can be sent to ${data.email}
+* The author's work can be accessed at ${data.github}`
 
 
     fs.writeFile(fileName, filler, (err) =>
