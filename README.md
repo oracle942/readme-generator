@@ -5,7 +5,7 @@ This is a repository for a readme generator project
 This is a readme generator meant to assist developers with constructing a markdown readme file.
 This application was built to help developers produce a professional readme file for their applications.
 This project was a valuable learning experience in running npm in node.js
-![video-link](https://drive.google.com/file/d/135DdBgJ4HLCZDNMWqz22mzu3AxbvTH0h/view)
+[video-link](https://drive.google.com/file/d/135DdBgJ4HLCZDNMWqz22mzu3AxbvTH0h/view)
 
 ## Installation
 To install this application one must download the associated files in a folder onto their local computer.
