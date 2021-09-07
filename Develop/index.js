@@ -47,42 +47,42 @@ const questions = [{
 function writeToFile(fileName, data) {
     let filler = `# ${data.license} License
 
-    # TITLE
-    ${data.name}
+# TITLE
+${data.name}
 
-    # DESCRIPTION
-    ${data.usage}
+# DESCRIPTION
+${data.usage}
 
-    # TABLE OF CONTENTS
-    * [Title](#title)
-    * [Description](#description)
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributions](#contributions)
-    * [Questions](#questions)
-    
-    # INSTALLATION
-    ${data.installation}
+# TABLE OF CONTENTS
+* [Title](#title)
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributions](#contributions)
+* [Questions](#questions)
 
-    # USAGE
-    ${data.usage}
+# INSTALLATION
+${data.installation}
 
-    # LICENSE
-    ${data.license} License
+# USAGE
+${data.usage}
 
-    # CONTRIBUTIONS
-    ${data.contributions}
+# LICENSE
+${data.license} License
 
-    # TESTS 
-    ${data.test}
+# CONTRIBUTIONS
+${data.contributions}
 
-    # ISSUES
-    ${data.issues}
+# TESTS 
+${data.test}
 
-    # QUESTIONS
-    * ${data.email}
-    * ${data.github}`
+# ISSUES
+${data.issues}
+
+# QUESTIONS
+* ${data.email}
+* ${data.github}`
 
 
     fs.writeFile(fileName, filler, (err) =>
