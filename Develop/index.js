@@ -4,6 +4,10 @@ const fs = require('fs');
 // TODO: Create an array of questions for user input
 const questions = [{
     type: 'input',
+    name: 'name',
+    message: "What is the name of the application?"},
+
+    {type: 'input',
     name: 'usage',
     message: "What will the application be used for?"},
 
@@ -22,13 +26,26 @@ const questions = [{
     {type: 'input',
     name: 'contributions',
     message: "How can developers make contributions to the application?"},
+    
+    {type: 'input',
+    name: 'email',
+    message: "What is your email?"},
+    
+    {type: 'input',
+    name: 'github',
+    message: "What is your github username?"},
+
+    {type: 'input',
+    name: 'license',
+    message: "What kind of license would ?",
+    choices: ["MIT", "BSD", "GPL"]},
 
 
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    let filler = `Hello World`
+    let filler = `${data.usage}`
     fs.writeFile(fileName, filler, (err) =>
     err ? console.error(err) : console.log('Success!'))
 }
@@ -37,7 +54,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then((data) => {
-        const fileName = "README.md"
+        const fileName = `${data.title}.md`
         writeToFile(fileName, data)
     })
 }
